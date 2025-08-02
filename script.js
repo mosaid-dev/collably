@@ -17,3 +17,34 @@ console.log(`The sum of ${favNum1} and ${favNum2} is ${sum }.`);
 
 const product = favNum1 * favNum2;
 console.log(`The product of ${favNum1} and ${favNum2} is ${product}.`);
+
+//user profile 
+const userProfile = {
+    username:"mohamed saidi",
+    age: 23,
+    isLoggedIn: true,
+    skills:["javascript", "python", "html", "css"]
+
+};
+console.log("username:",userProfile.username);
+console.log("second skill:", userProfile.skills[1]);
+
+// welcome function
+function displayWelcomeMessage(user) {
+    const message = `welcome ,${user.username}!`;
+    console.log(message);
+}
+
+displayWelcomeMessage(userProfile);
+
+//status check function
+function checkLoginStatus(profile) {
+    if (profile.isLoggedIn) {
+        return "user is currently logged in.";
+    } else{
+        return "user is not  logged in. ";
+    }
+}
+
+const statusMessage = checkLoginStatus(userProfile);
+console.log(statusMessage); 
