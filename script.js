@@ -23,7 +23,7 @@ const userProfile = {
     username:"mohamed saidi",
     age: 23,
     isLoggedIn: true,
-    skills:["javascript", "python", "html", "css"]
+    skills:["javascript", "css", "html", "html5"],
 
 };
 console.log("username:",userProfile.username);
@@ -48,3 +48,19 @@ function checkLoginStatus(profile) {
 
 const statusMessage = checkLoginStatus(userProfile);
 console.log(statusMessage); 
+
+
+const themeButton = document.querySelector('#theme-button');
+const bodyElement = document.querySelector('body');
+
+function toggleTheme() {
+  bodyElement.classList.toggle('dark');
+
+  if (bodyElement.classList.contains('dark')) {
+    themeButton.textContent = "Toggle Light Mode";
+  } else {
+    themeButton.textContent = "Toggle Dark Mode";
+  }
+}
+
+themeButton.addEventListener('click', toggleTheme);

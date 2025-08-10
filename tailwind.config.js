@@ -9,3 +9,12 @@ module.exports = {
   },
   plugins: [],
 }
+module.exports = {
+  darkMode: 'class', // Enable dark mode by adding 'dark' class
+  content: ["./*.html", "./src/**/*.{js,css}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+};
+
